@@ -1,7 +1,9 @@
 # scrapping_data_
+## Saya memakai (compass/crawler-google-places), ini tersedia di apify store
 
 # ── Code cell 1 ──
-```!pip install apify-client 
+```
+!pip install apify-client 
 !pip install pandas
 ```
 
