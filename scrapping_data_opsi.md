@@ -21,7 +21,7 @@ run = client.actor("compass/crawler-google-places").call(run_input={
     "maxReviews": 20,
     "language": "id",
     "personalData": False,
-})'''
+})
 
 rows = [
     {"nama_tempat": p.get("title"), "bintang": r.get("stars"), "review": r.get("text")} # No username
