@@ -1,5 +1,4 @@
-# scrapping_data_opsi
-_Konversi dari `/home/shiki/Downloads/scrapping_data_opsi.ipynb` — hanya kode & markdown, output dihilangkan._
+# scrapping_data_
 
 # ── Code cell 1 ──
 !pip install apify-client
@@ -7,7 +6,7 @@ _Konversi dari `/home/shiki/Downloads/scrapping_data_opsi.ipynb` — hanya kode 
 
 # **Scrapping per-rumah sakit**
 
-# ── Code cell 3 ──
+## ── Code cell 3 ──
 from google.colab import userdata
 from apify_client import ApifyClient
 import pandas as pd
@@ -15,7 +14,7 @@ import pandas as pd
 client = ApifyClient(userdata.get("APIFY_TOKEN"))
 
 run = client.actor("compass/crawler-google-places").call(run_input={
-    "startUrls": [{"url": "https://www.google.com/maps/place/RS+Awal+Bros+Botania+Batam/@1.1108346,104.0744448,13z/data=!4m10!1m2!2m1!1srumah+sakit+di+batam!3m6!1s0x31d98910e0bb27fd:0xcefae14a6bb4b82e!8m2!3d1.1069458!4d104.0902102!15sChRydW1haCBzYWtpdCBkaSBiYXRhbVoWIhRydW1haCBzYWtpdCBkaSBiYXRhbZIBEHByaXZhdGVfaG9zcGl0YWyaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTkVaMHBtVG1SbkVBReABAPoBBAgAEEk!16s%2Fg%2F11k4pkzztx?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"}],
+    "startUrls": [{"url": "https://www.google.com/maps/place/RS+Awal+Bros+Botania+Batam/@1.1108346,104.0744448,13z/data=!4m10!1m2!2m1!1srumah+sakit+di+batam3m61s0x31d98910e0bb27fd:0xcefae14a6bb4b82e8m2!3d1.1069458!4d104.090210215sChRydW1haCBzYWtpdCBkaSBiYXRhbVoWIhRydW1haCBzYWtpdCBkaSBiYXRhbZIBEHByaXZhdGVfaG9zcGl0YWyaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTkVaMHBtVG1SbkVBReABAPoBBAgAEEk!16s%2Fg%2F11k4pkzztxentry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"}],
     "maxReviews": 20,
     "language": "id",
     "personalData": False,
@@ -30,7 +29,7 @@ pd.DataFrame(rows).dropna(subset=["review"]).to_csv("reviews54.csv", index=False
 
 # **Scrapping berdasarkan search mencakup lebih dari 1 rs**
 
-# ── Code cell 5 ──
+## ── Code cell 5 ──
 from apify_client import ApifyClient
 import pandas as pd
 
