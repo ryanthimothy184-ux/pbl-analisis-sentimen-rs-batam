@@ -1,19 +1,17 @@
 # scrapping_data_
 
 # ── Code cell 1 ──
-!pip install apify-client 
-
+```!pip install apify-client 
 !pip install pandas
+```
 
 # **Scrapping per-rumah sakit**
 
 ## ── Code cell 3 ──
-'''from google.colab import userdata
+```from google.colab import userdata
 
 from apify_client import ApifyClient
-
 import pandas as pd
-
 client = ApifyClient(userdata.get("APIFY_TOKEN"))
 
 run = client.actor("compass/crawler-google-places").call(run_input={
@@ -29,11 +27,12 @@ rows = [
     for r in p.get("reviews", [])
 ]
 pd.DataFrame(rows).dropna(subset=["review"]).to_csv("reviews54.csv", index=False, encoding="utf-8-sig")
+```
 
 # **Scrapping berdasarkan search mencakup lebih dari 1 rs**
 
 ## ── Code cell 5 ──
-from apify_client import ApifyClient
+```from apify_client import ApifyClient
 import pandas as pd
 
 client = ApifyClient("apify_api_.......")  # Console > Settings > Integrations
@@ -64,3 +63,4 @@ for place in items:
 df = pd.DataFrame(rows).dropna(subset=["review"]).drop_duplicates()
 df.to_csv("reviews.csv", index=False, encoding="utf-8-sig")
 print(df.shape)
+```
