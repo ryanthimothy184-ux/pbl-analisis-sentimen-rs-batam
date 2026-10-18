@@ -18,6 +18,7 @@ client = ApifyClient(userdata.get("APIFY_TOKEN"))
 
 run = client.actor("compass/crawler-google-places").call(run_input={
     "startUrls": [{"url": "https://www.google.com/maps/place/RS+Awal+Bros+Botania+Batam/@1.1108346,104.0744448,13z/data=!4m10!1m2!2m1!1srumah+sakit+di+batam3m61s0x31d98910e0bb27fd:0xcefae14a6bb4b82e8m2!3d1.1069458!4d104.090210215sChRydW1haCBzYWtpdCBkaSBiYXRhbVoWIhRydW1haCBzYWtpdCBkaSBiYXRhbZIBEHByaXZhdGVfaG9zcGl0YWyaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVTkVaMHBtVG1SbkVBReABAPoBBAgAEEk!16s%2Fg%2F11k4pkzztxentry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D"}],
+    
     "maxReviews": 20,
     "language": "id",
     "personalData": False,
