@@ -1,7 +1,7 @@
 # scrapping_data_
 
 # ── Code cell 1 ──
-!pip install apify-client
+!pip install apify-client 
 !pip install pandas
 
 # **Scrapping per-rumah sakit**
