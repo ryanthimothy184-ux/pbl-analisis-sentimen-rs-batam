@@ -10,10 +10,11 @@
 # **Scrapping per-rumah sakit**
 
 ## ── Code cell 3 ──
-```from google.colab import userdata
-
+```
+from google.colab import userdata
 from apify_client import ApifyClient
 import pandas as pd
+
 client = ApifyClient(userdata.get("APIFY_TOKEN"))
 
 run = client.actor("compass/crawler-google-places").call(run_input={
