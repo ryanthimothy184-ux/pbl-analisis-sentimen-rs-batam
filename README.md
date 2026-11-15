@@ -1,9 +1,4 @@
----
 # Analisis Sentimen Ulasan Google Maps Rumah Sakit di Kota Batam
-
-[![Proyek PBL](https://img.shields.io/badge/PBL-PBLIF3--PD12-blue)](https://github.com/users/ryanthimothy184-ux/projects/1)
-[![Institusi](https://img.shields.io/badge/Politeknik%20Negeri%20Batam-Teknik%20Informatika-orange)]()
-[![Python](https://img.shields.io/badge/Python-3.11-green)]()
 
 ## 📌 Deskripsi Proyek
 
@@ -19,7 +14,6 @@ Proyek ini dikembangkan untuk memenuhi mata kuliah **IF314 Proyek Inovasi Agile*
 * **Pra-pemrosesan & Pelabelan:** Membersihkan teks ulasan (*cleaning*, *case folding*, normalisasi kata tidak baku, *stopword removal*, dan *stemming* bahasa Indonesia) serta melabeli sentimen secara terstruktur.
 * **Pemodelan Klasifikasi Sentimen:**
   * **Model Baseline:** Ekstraksi fitur **TF-IDF** (*unigram* & *bigram*) dengan algoritma **Linear SVM**, *Logistic Regression*, dan *Multinomial Naïve Bayes* (target `F1-macro ≥ 0,65`).
-  * **Model Utama:** *Fine-tuning* **IndoBERT** (`indobenchmark/indobert-base-p1`) dengan penanganan ketimpangan kelas (target `F1-macro ≥ 0,75` dan `Recall kelas negatif ≥ 0,80`).
 * **Aplikasi Web & Dashboard:** Menyediakan antarmuka web bagi admin/analis untuk menguji klasifikasi teks satuan maupun unggah berkas CSV, memfilter hasil per rumah sakit/sentimen, melihat *word cloud* keluhan, serta mengekspor laporan dalam format PDF.
 
 ---
@@ -40,7 +34,6 @@ Proyek ini dikembangkan untuk memenuhi mata kuliah **IF314 Proyek Inovasi Agile*
 | **Pengolahan Data** | `pandas`, `numpy` | Manipulasi dan pembersihan dataset tabular |
 | **NLP Bahasa Indonesia** | `PySastrawi`, `difflib` | *Stemming*, *stopword removal*, dan koreksi *typo* label |
 | **Machine Learning** | `scikit-learn`, `imbalanced-learn` | Ekstraksi fitur TF-IDF, SVM, evaluasi metrik, dan SMOTE |
-| **Deep Learning** | `PyTorch`, `Hugging Face Transformers` | *Fine-tuning* dan inferensi model `indobert-base-p1` |
 | **Web & Database** | Streamlit / Web App, PostgreSQL | Antarmuka *dashboard* analitik dan penyimpanan hasil |
 
 ---
